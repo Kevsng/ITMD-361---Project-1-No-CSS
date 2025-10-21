@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root{
+  --maxw: 70rem;
+  --space: 1rem;
+  --space-lg: 2rem;
+  --text: #111;
+  --bg: #fff;
+  --accent: #2b6cb0;
+}
+
+html{font-size:100%;}
+body{
+  margin:0;
+  font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+.wrapper{
+  width:min(100%, var(--maxw));
+  margin-inline:auto;
+  padding-inline:clamp(1rem, 3vw, 2rem);
+}
+
+header{
+  padding-block:var(--space);
+  border-bottom:.05rem solid #ddd;
+}
+
+nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:clamp(.75rem, 2vw, 1.25rem);
+  justify-content:center;
+  align-items:center;
+}
+
+nav a{
+  text-decoration:none;
+  font-weight:600;
+  padding:.5rem .9rem;
+  border-radius:.5rem;
+  display:inline-block;
+}
+
+nav a:link, nav a:visited{ color:var(--accent); }
+nav a:hover, nav a:focus{ outline:.15rem solid currentColor; }
+
+main{ padding-block:var(--space-lg); }
+
+h1{ font-size:clamp(1.6rem, 3.2vw, 2.2rem); margin:0 0 1rem 0; }
+h2{ font-size:clamp(1.25rem, 2.6vw, 1.7rem); margin:1.5rem 0 .75rem 0; }
+p, li{ font-size:clamp(1rem, 1.8vw, 1.125rem); }
+
+img{ max-width:100%; height:auto; display:block; }
+
+.video{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+}
+.video iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(16rem, 1fr));
+  gap:clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.button{
+  display:inline-block;
+  padding:.75rem 1rem;
+  border-radius:.75rem;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer{
+  border-top:.05rem solid #ddd;
+  padding-block:var(--space);
+  text-align:center;
+  font-size:.95rem;
+  color:#444;
+}
+
+.fixed{
+  max-width:60rem;
+  margin-inline:auto;
+}
+
+@media (min-width:48rem){
+  .lead{ font-size:1.25rem; }
+}
